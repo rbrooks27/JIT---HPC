@@ -1,6 +1,4 @@
-import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryMXBean;
-import java.lang.management.MemoryUsage;
+import java.io.IOException;
 
 public class BenchmarkDriver {
     public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class BenchmarkDriver {
         try {
             Process p = new ProcessBuilder("javac", "MatrixOps.java").start();
             p.waitFor();
-        } catch (Exception e) {
+        } catch (IOException | InterruptedException e) {
             System.err.println("Compilation failed.");
         }
         long compileEnd = System.currentTimeMillis();
