@@ -4,7 +4,7 @@ This project benchmarks the performance of Java matrix multiplication, measuring
 - Java compilation time
 - Runtime execution time (with multiple iterations)
 - Memory usage
-- Optional: JIT compilation behavior using JVM flags
+
 
 ##  How to Run
 
